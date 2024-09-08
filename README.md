@@ -1,4 +1,4 @@
-### Understanding Migration Patterns in the United States After the Pandemic
+## Understanding Migration Patterns in the United States After the Pandemic: Comparative Study of Predictive Models
 
 ### Problem Statement
 
@@ -35,13 +35,14 @@ To predict county-level migration patterns, we trained six machine learning mode
 5. **Boosting**: An iterative technique to improve model accuracy by focusing on misclassified instances.
 6. **Random Forest**: A robust ensemble method that averaged multiple decision trees to minimize overfitting and improve accuracy.
 
-### Results: Model Comparison
-
-![alt text](output1.png)
+### Results: Model Comparison Summary
 
 ![alt text](output1.png)
 
 In general, all models seem to perform reasonably well, with no clear pattern of residuals that would indicate bias. Some models, like the Gradient Boosting and Random Forest, appear to have better performance due to the more uniform spread of residuals, which suggests a consistent predictive performance across the range of predicted values. However, the slight funnel shapes in some plots imply that the variance of errors may be increasing with predicted values, which is a phenomenon known as heteroscedasticity. This could be improved potentially by transforming the target variable or applying variance-stabilizing techniques.
+
+![alt text](output2.png)
+
 
 #### Techniques Used:
 - **Cross-Validation**: To ensure model reliability, we used cross-validation to tune hyperparameters for each model, such as maximum depth for decision trees and the number of bootstraps for bagging.
