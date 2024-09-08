@@ -37,17 +37,21 @@ To predict county-level migration patterns, we trained six machine learning mode
 
 ### Results: Model Comparison Summary
 
-![alt text](output1.png)
+![alt text](.ignore/output1.png)
 
 In general, all models seem to perform reasonably well, with no clear pattern of residuals that would indicate bias. Some models, like the Gradient Boosting and Random Forest, appear to have better performance due to the more uniform spread of residuals, which suggests a consistent predictive performance across the range of predicted values. However, the slight funnel shapes in some plots imply that the variance of errors may be increasing with predicted values, which is a phenomenon known as heteroscedasticity. This could be improved potentially by transforming the target variable or applying variance-stabilizing techniques.
 
-![alt text](output2.png)
+![alt text](.ignore/output2.png)
 
 
 #### Techniques Used:
 - **Cross-Validation**: To ensure model reliability, we used cross-validation to tune hyperparameters for each model, such as maximum depth for decision trees and the number of bootstraps for bagging.
 - **Grid Search**: For boosting and random forests, we employed grid search to find the optimal parameters for learning rate, number of estimators, and depth.
 - **Feature Importance**: We generated feature importance plots for the tree-based models, enhancing the interpretability of the results.
+- **Hyperparameter Tuning**: By fine-tuning models using cross-validation and grid search, we improved model performance and reduced overfitting.
+- **Ensemble Methods**: Utilizing ensemble techniques like **Bagging**, **Boosting**, and **Random Forests** significantly enhanced predictive accuracy over traditional linear models.
+- **Feature Importance Analysis**: This helped identify the most influential variables, adding transparency to the predictive process and informing future decision-making.
+
 
 ### Findings
 
@@ -62,12 +66,7 @@ After splitting the dataset into an 80:20 train-test ratio, we assessed the mode
 - **AGI of Leavers**: Wealthier individuals were more likely to leave urban areas, possibly seeking lower cost of living or more space in suburban or rural regions.
 - **Homeownership Rates**: Higher homeownership rates were associated with lower migration, indicating that residents with a more permanent investment in their homes were less likely to move.
 
-### Technical Acumen and Impact
-
-This project demonstrated our strong technical grasp of advanced machine learning techniques, including:
-- **Hyperparameter Tuning**: By fine-tuning models using cross-validation and grid search, we improved model performance and reduced overfitting.
-- **Ensemble Methods**: Utilizing ensemble techniques like **Bagging**, **Boosting**, and **Random Forests** significantly enhanced predictive accuracy over traditional linear models.
-- **Feature Importance Analysis**: This helped identify the most influential variables, adding transparency to the predictive process and informing future decision-making.
+![alt text](.ignore/output3.png)
   
 ### Practical Applications
 
